@@ -51,8 +51,7 @@ const sessionOptions={
     } 
 }
 app.get("/", (req, res) => {
-    res.send("Root route");
-    console.log("index route");
+    res.redirect("/listings");
 })
 
 app.use(session(sessionOptions));
