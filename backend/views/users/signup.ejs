@@ -1,0 +1,46 @@
+<% layout('/layouts/boilerplate') -%>
+
+  <div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card shadow-lg p-4 border-0 rounded-4" style="width: 100%; max-width: 480px; background-color: rgba(255, 255, 255, 0.9);">
+        <h2 class="text-center mb-4 text-success fw-bold">Sign Up for <span class="text-primary">WanderLust</span></h2>
+
+        <form action="/signup" method="POST" class="needs-validation" novalidate>
+            <!-- Username -->
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <div class="input-group input-group-lg">
+                    <span class="input-group-text bg-light"><i class="fas fa-user"></i></span>
+                    <input type="text" name="username" id="username" class="form-control" placeholder="Choose a username" required />
+                    <div class="invalid-feedback">Please enter a username.</div>
+                </div>
+            </div>
+
+            <!-- Email -->
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <div class="input-group input-group-lg">
+                    <span class="input-group-text bg-light"><i class="fas fa-envelope"></i></span>
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email" required />
+                    <div class="invalid-feedback">Please enter a valid email.</div>
+                </div>
+            </div>
+
+            <!-- Password -->
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <div class="input-group input-group-lg">
+                    <span class="input-group-text bg-light"><i class="fas fa-lock"></i></span>
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Create a password" required />
+                    <div class="invalid-feedback">Please enter a password.</div>
+                </div>
+            </div>
+
+            <button class="btn btn-success btn-lg w-100 mt-3 shadow-sm">Sign Up</button>
+        </form>
+
+        <div class="text-center mt-3">
+            <p class="text-muted">Already have an account? <a href="/login" class="text-decoration-none text-primary">Login here</a></p>
+        </div>
+    </div>
+  </div>
+
